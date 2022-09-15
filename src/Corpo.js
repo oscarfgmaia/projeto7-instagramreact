@@ -1,3 +1,4 @@
+
 function Usuario(props) {
     return (
         <div class="usuario">
@@ -88,7 +89,7 @@ export default function Corpo() {
         <div class="corpo">
             <div class="esquerda">
                 <div class="stories">
-                    
+
                     <Stories name="9gag" img="assets/img/9gag.svg"/>
                     <Stories name="meowed" img="assets/img/meowed.svg"/>
                     <Stories name="barked" img="assets/img/barked.svg"/>
@@ -125,7 +126,7 @@ export default function Corpo() {
 
             <div class="sidebar">
 
-                <Usuario username="oscarfgmaia" name="Oscar" />
+                <Usuario username='oscarfgmaia' name='Oscar' />
 
                 <div class="sugestoes">
                     <div class="titulo">
