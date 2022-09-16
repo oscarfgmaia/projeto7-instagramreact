@@ -7,7 +7,7 @@ export default function Usuario(props) {
     }
     return (
         <div class="usuario">
-            <img src={props.img} onClick = {editarFoto}/>
+            <img src={props.img} onClick = {editarFoto} alt={props.name}/>
             <div class="texto">
                 <strong>{props.username}</strong>
                 <span>

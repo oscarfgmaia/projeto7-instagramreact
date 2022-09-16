@@ -15,7 +15,7 @@ export default function Posts(props) {
         <div class="post">
             <div class="topo">
                 <div class="usuario">
-                    <img src={props.imgProfile} />
+                    <img src={props.imgProfile} alt={props.name}/>
                     {props.name}
                 </div>
                 <div class="acoes">
@@ -24,7 +24,7 @@ export default function Posts(props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.imgPost} onClick={curtirPost}/>
+                <img src={props.imgPost} onClick={curtirPost} alt={props.name}/>
             </div>
 
             <div class="fundo">
@@ -40,7 +40,7 @@ export default function Posts(props) {
                 </div>
 
                 <div class="curtidas">
-                    <img src={props.likedByImg} />
+                    <img src={props.likedByImg} alt={props.name}/>
                     <div class="texto">
                         Curtido por <strong>{props.likedBy}</strong> e <strong>outras {props.curtidas} pessoas</strong>
                     </div>
