@@ -102,6 +102,9 @@ body {
   position: relative;
 }
 
+.vermelho{
+  color: rgb(237, 73, 86);
+}
 .story {
   display: flex;
   height: 100%;
