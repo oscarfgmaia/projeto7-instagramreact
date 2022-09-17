@@ -4,28 +4,28 @@ import { useState } from "react"
 export default function Posts(props) {
 
     let [nomeIcon, setIcon] = useState('bookmark-outline')
-    function salvarPost(){
-        if(nomeIcon === 'bookmark-outline'){
+    function salvarPost() {
+        if (nomeIcon === 'bookmark-outline') {
             setIcon('bookmark')
         }
-        else{
+        else {
             setIcon('bookmark-outline')
         }
     }
-    
+
 
     let [likeIcon, setLike] = useState('heart-outline')
     let [curtidas, setCurtidas] = useState(props.curtidas)
     let [likeClass, setLikeClass] = useState('')
-    function curtirPost(){
-        if(likeIcon === 'heart-outline'){
+    function curtirPost() {
+        if (likeIcon === 'heart-outline') {
             setLike('heart')
-            setCurtidas(curtidas+1)
+            setCurtidas(curtidas + 1)
             setLikeClass('vermelho')
         }
-        else{
+        else {
             setLike('heart-outline')
-            setCurtidas(curtidas-1)
+            setCurtidas(curtidas - 1)
             setLikeClass('')
         }
     }
@@ -34,7 +34,7 @@ export default function Posts(props) {
         <div class="post">
             <div class="topo">
                 <div class="usuario">
-                    <img src={props.imgProfile} alt={props.name}/>
+                    <img src={props.imgProfile} alt={props.name} />
                     {props.name}
                 </div>
                 <div class="acoes">
@@ -43,7 +43,7 @@ export default function Posts(props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.imgPost} onClick={curtirPost} alt={props.name}/>
+                <img src={props.imgPost} onClick={curtirPost} alt={props.name} />
             </div>
 
             <div class="fundo">
@@ -59,7 +59,7 @@ export default function Posts(props) {
                 </div>
 
                 <div class="curtidas">
-                    <img src={props.likedByImg} alt={props.name}/>
+                    <img src={props.likedByImg} alt={props.name} />
                     <div class="texto">
                         Curtido por <strong>{props.likedBy}</strong> e <strong>outras {curtidas} pessoas</strong>
                     </div>

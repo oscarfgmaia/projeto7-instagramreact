@@ -35,7 +35,7 @@ export default function Corpo() {
     ]
 
     const storiesList = stories.map((item) => <Stories name={item.name} img={item.img} />)
-    
+
     const postsList = posts.map((item) => <Posts imgProfile={item.imgProfile} name={item.name} imgPost={item.imgPost} likedByImg={item.likedByImg} likedBy={item.likedBy} curtidas={item.curtidas} />)
 
     return (
