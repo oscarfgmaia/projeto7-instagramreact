@@ -1,8 +1,7 @@
 import { useState } from "react"
 
 
-export default function Posts(props) {
-
+function Post(props) {
     let [nomeIcon, setIcon] = useState('bookmark-outline')
     function salvarPost() {
         if (nomeIcon === 'bookmark-outline') {
@@ -67,4 +66,29 @@ export default function Posts(props) {
             </div>
         </div>
     )
+}
+
+export default function Posts() {
+    const posts = [
+        {
+            imgProfile: "assets/img/meowed.svg",
+            name: "meowed",
+            imgPost: "assets/img/gato-telefone.svg",
+            likedByImg: "assets/img/respondeai.svg",
+            likedBy: "respondeai",
+            curtidas: 15774
+        },
+        {
+            imgProfile: "assets/img/barked.svg",
+            name: "barked",
+            imgPost: "assets/img/dog.svg",
+            likedByImg: "assets/img/adorable_animals.svg",
+            likedBy: "adorable_animals",
+            curtidas: 124478
+        }
+
+    ]
+    const postsList = posts.map((item) => <Post imgProfile={item.imgProfile} name={item.name} imgPost={item.imgPost} likedByImg={item.likedByImg} likedBy={item.likedBy} curtidas={item.curtidas} />)
+
+    return postsList
 }
