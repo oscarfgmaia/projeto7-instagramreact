@@ -16,6 +16,7 @@ function Post(props) {
     let [likeIcon, setLike] = useState('heart-outline')
     let [curtidas, setCurtidas] = useState(props.curtidas.toLocaleString('pt-BR'))
     let [likeClass, setLikeClass] = useState('')
+    
     function curtirPost() {
         curtidas = curtidas.toString().replace(".","")
         curtidas = parseInt(curtidas)
@@ -24,14 +25,12 @@ function Post(props) {
             curtidas++
             setCurtidas(curtidas.toLocaleString('pt-BR'))
             setLikeClass('vermelho')
-            console.log('if: '+curtidas)
         }
         else {
             setLike('heart-outline')
             curtidas--
             setCurtidas(curtidas.toLocaleString('pt-BR'))
             setLikeClass('')
-            console.log('else: '+curtidas)
         }
     }
 
